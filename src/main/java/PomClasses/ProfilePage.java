@@ -20,11 +20,16 @@ public class ProfilePage extends Util1{
 		 this.driver = driver;
 	 }
 	 
-	 public void getFullProfileName()
+	 public boolean getFullProfileName()
 	 {
 		 WebElement element = explicitWait(driver,fullProfileName);
 		 String fullName = element.getText();
-		 
+		  if(fullName.contains("Asmita Mane")) {
+			  return true;
+			  }
+		  else {
+			  return false;
+			  }
 	 }
 	
 	
